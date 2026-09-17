@@ -1,0 +1,132 @@
+<html>
+<title>Matt Roberts' website</title>
+<head>
+<script language="JavaScript">
+<!--
+function testResults (form) {
+    var TestVar = form.distribution.value;
+    if (TestVar == "uniform")
+	{
+		document.getElementById("rvs").innerHTML="Here are ten independent Uniform[0,1] random variables:<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "<br>" + Math.random() + "";
+	}
+	else if (TestVar == "exp")
+	{
+		document.getElementById("rvs").innerHTML="Here are ten independent exponential random variables with mean 1:<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "<br>" + (-1)*Math.log(Math.random()) + "";
+	}
+	else
+	{
+		document.getElementById("rvs").innerHTML="Here are ten independent Normal(0,1) random variables:<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "<br>" + Math.sqrt((-2)*Math.log(Math.random()))*Math.cos(2*Math.PI*Math.random()) + "";
+	}
+}
+//-->
+</script>
+<style>
+body {
+    background-color: #F1F8FF;
+}
+
+p {
+    font-family: sylfaen;
+}
+
+a:link {
+    color:#0081FA;
+}
+
+a:visited {
+    color:#6B96BF;
+}
+
+a:active {
+    color:#0081FA;
+}
+
+table {
+	margin:auto;
+}
+
+h1 {
+	font-family: sylfaen;
+	font-size:40px;
+	text-decoration: underline;
+	line-height:0.6;
+}
+</style>
+</head>
+<body>
+
+<table width=700 rows=2 cols=5 style="border:0px;padding-left:0px;padding-right:0px;border-spacing:0px;">
+<tr>
+  <td colspan="5" style="font-size:60px;color:white;font-family:georgia;text-align:center;background-color:#84C1FF;padding-top:10px;padding-bottom:10px;">Pictures</td>
+</tr>
+<tr style="text-align:center;background-color:#A6D2FF;font-family:georgia;color:white;">
+  <td style="padding-top:2px;padding-bottom:2px;"><a href="index.html" style="color:white;text-decoration:none;">Home</a></td><td><a href="research.html" style="color:white;text-decoration:none;">Research</a></td><td><a href="pictures.html" style="color:white;text-decoration:none;">Pictures</a></td><td><a href="teaching.html" style="color:white;text-decoration:none;">Teaching</a></td>
+</tr>
+</table>
+
+<table width = 700 rows=1 cols=1>
+<tr>
+<td style="padding-top:20px;padding-left:10px;padding-bottom:20px;padding-right:10px;">
+
+<p>Here (click the image for a higher-res version) is a picture of a branching Brownian motion in one dimension (the x-axis represents time, and each particle is a different colour):
+</p><p>
+<a href="images/bbm7.jpg"><img width=676 src="images/bbm7_small.jpg" /></a>
+</p><p>
+Drawing discrete trees in a useful way is tricky, as the number of possible leaves in each generation increases exponentially. Here are a couple of attempts at drawing a random binary search tree (random quicksort) with 20,000 insertions. Colour represents age (red means the node was added early on, blue late). Click for higher-res.
+</p><p>
+<center><a href="images/bst_no_overlap_2.png"><img src="images/bst_no_overlap_2.gif" width=280></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="images/bst_overlap.png"><img src="images/bst_overlap.gif" width=280></a></center>
+</p><p>
+And for even higher res, click below, but beware, it's 2.5mb.
+</p><p>
+<center><a href="images/bst_overlap_big.png"><img src="images/bst_close_up.gif" width=614></a></center>
+</p><p>
+One interesting quantity in the random binary search tree is the number of leaves at the top-most level of the tree (called the "fringe" in the article mentioned above). The picture below shows this quantity (thick blue line) together with the number at the next level down (thin red line) and the level below that (dashed green line). You can see the picture in higher resulotion by clicking on it. The horizontal axis represents time, and the vertical axis is the number of particles present.
+</p><p>
+<center><a href="images/fringe.gif"><img src="images/fringe.gif" width=600></a></center>
+</p><p>
+I also drew some prettier, but less useful, pictures of the BST. Below, the top level (the fringe) is orange/red, the level below that is blue/purple, and the third level is green - and it was run over a much shorter time-scale. Again, click the image for the full-sized version. 
+</p><p>
+<center><a href="images/bst_enh_large.gif"><img src="images/bst_enh_large.gif" width=600></a></center>
+</p><p>
+<center><a href="images/bst_enh_black.jpg"><img src="images/bst_enh_black.gif" width=600></a></center>
+</p><p>
+The following picture is from a simulation of a model that I worked on with Marcel Ortgiese, the branching random walk in Pareto environment.
+</p><p>
+<center><a href="programs/lilypads/index.html"><img src="images/lilypads_l1.gif" width=600></a></center>
+</p><p>
+I can't take any credit for the next model - see instead <a href="http://arxiv.org/abs/0901.4760">Jeff Steif's survey</a> and references within - but I was experimenting with a programming language called Processing one day and drew some pictures of dynamical percolation.
+</p><p>
+<center><img src="images/dynamical_perco.gif"></center>
+</p><p>
+This is critical bond percolation on Z^2 where each bond randomly updates its status at independent exponential times. There are four versions:<br />
+<a href="programs/perco2/">A basic version</a> with no colours - press any key to start/pause the dynamical version.<br />
+<a href="programs/perco3/index.html">A colourful version</a> with clusters belonging to the origin and four other evenly-spaced points (one in each corner) shown in different colours. This version also has a link to the source code, but this was written in a very outdated version of Processing.<br />
+<a href="programs/perco/">A version that cycles between no colours / colours / paused when you press a key.</a><br />
+<a href="programs/perco4/index.html">A smaller, faster-moving version.</a> <br />
+The important thing to note from a mathematical point of view is that "large" clusters (of each colour) appear and disappear very suddenly.
+</p><p>
+The following is a two-dimensional version of something that I have starting thinking about in one dimension (on the circle). One-dimensional pictures tend to be less interesting so I drew this instead. (In fact it's not even quite the 2-d equivalent of the 1-d model I have been looking at, but it's similar.) In each time-step each square has a chance to fragment into four smaller squares, or - if there are three other squares of the same size available - to combine with three others to make a bigger square. Every time a fragmentation or coagulation occurs the centres of the newly-created squares are distributed uniformly over the window. Where I say "has a chance", you might like to ask yourself what probabilities one should choose to get interesting questions. Click the image to see the program in action - note that it doesn't start in equilibrium so you have to wait a while for it to get going.
+</p><p>
+<center><a href="programs/circle_squares/index.html"><img src="images/circle_squares.gif"></a></center>
+</p><p>
+Here is a picture of a branching Brownian motion on a circle (distance from the origin represents time). It's hard to see what's going on - but it's kind of pretty I think.
+</p><p>
+<center><img width=568 src="images/bbm_circle.gif" /></center>
+</p><p>
+And another picture of BBM on a circle: this time it's in 3D, with the Z-axis representing time. Slightly easier to see what's actually happening, at least to start off with.
+</p><p>
+<center><img width=604 src="images/bbm_circle_3d.gif" /></center>
+</p>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7124123-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
